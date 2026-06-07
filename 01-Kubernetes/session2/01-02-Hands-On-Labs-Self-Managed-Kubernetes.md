@@ -34,6 +34,7 @@ ssh -i ~/.ssh/my-k8s-key.pem ubuntu@master-public-ip
 # Use the k8s-master.sh script to provision the master node
 cd /home/ubuntu
 vim "k8s-master.sh" # Copy the script from: Self-Managed-Kubernetes-Cluster\shell-scripts\k8s-master.sh
+Change the master node IP address in the k8s-master.sh shell script at line 91 to the elastic IP of the Master node, e.g: <master-node-public-ip>:6443 to ELASTIC_IP:6443
 chmod +x k8s-master.sh
 bash k8s-master.sh
 ```
