@@ -638,9 +638,7 @@ spec:
 
 2. **Generate load** (Terminal 3):
    ```bash
-   # Get the service IP or LoadBalancer endpoint
-   SERVICE_IP=$(kubectl get svc hpa-demo -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
-
+   
    # Generate continuous HTTP requests (using kubectl run)
    kubectl run -it --rm load-generator --image=busybox /bin/sh
 
